@@ -16,6 +16,11 @@ scaffolding — see [`docs/reference-architectures.md`](docs/reference-architect
 for a detailed comparison of how other public UGV platforms are built and
 what CBR-1 will follow. Actual ROS 2 packages land here as they're built.
 
+CBR-1's electronics platform isn't finalized yet, which currently blocks
+writing real drive/lighting/sensor code — see
+[`docs/decisions.md`](docs/decisions.md) for why, and what's reusable from
+elsewhere once that's settled.
+
 ## Why this exists
 
 Most UGV codebases you can find publicly are either full commercial stacks
