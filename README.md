@@ -11,15 +11,25 @@ the reasoning for those choices written down, not just the code.
 
 ## Status
 
-Early stage. Right now this repo contains architecture research and project
-scaffolding — see [`docs/reference-architectures.md`](docs/reference-architectures.md)
-for a detailed comparison of how other public UGV platforms are built and
-what CBR-1 will follow. Actual ROS 2 packages land here as they're built.
+Early stage. Architecture research is written up in
+[`docs/reference-architectures.md`](docs/reference-architectures.md) — a
+comparison of how other public UGV platforms (Clearpath Husky and others)
+are built, and what CBR-1 will follow.
 
 CBR-1's electronics platform isn't finalized yet, which currently blocks
 writing real drive/lighting/sensor code — see
 [`docs/decisions.md`](docs/decisions.md) for why, and what's reusable from
 elsewhere once that's settled.
+
+## What's actually here
+
+- **[`ros2_ws/src/cbr1_data_pipeline`](ros2_ws/src/cbr1_data_pipeline)** —
+  the first real code in this repo. Records robot experiments (rosbag2 +
+  reproducibility metadata: who/when/what code/notes) and exports topics to
+  CSV for analysis. Hardware-agnostic by design — see
+  [`docs/research-data-pipeline.md`](docs/research-data-pipeline.md) for why
+  this was the right first thing to build while the electronics decision is
+  still open.
 
 ## Why this exists
 

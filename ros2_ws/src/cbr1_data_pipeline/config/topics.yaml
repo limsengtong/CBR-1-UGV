@@ -1,0 +1,14 @@
+# Default topic list recorded by record_experiment.launch.py.
+# These match the standard ROS 2 interfaces CBR-1 is committing to
+# (see docs/reference-architectures.md) rather than any hardware-specific
+# topic names, so this file doesn't need to change as the electronics
+# platform gets decided.
+topics:
+  - /cmd_vel
+  - /odom
+  - /tf
+  - /tf_static
+  - /joint_states
+  - /imu/data
+  - /diagnostics
+  - /battery_state

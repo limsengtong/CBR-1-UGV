@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cbr1_data_pipeline</name>
+  <version>0.1.0</version>
+  <description>
+    Research data pipeline for CBR-1: records rosbag2 experiments with
+    reproducibility metadata (operator, timestamp, code commit, free-text
+    notes) and exports topics to CSV for offline analysis. Works against any
+    robot bringup (real or simulated) since it only depends on standard ROS 2
+    topics, not CBR-1's (still undecided) hardware specifics.
+  </description>
+  <maintainer email="sengtonglim@gmail.com">limsengtong</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>rosbag2_py</depend>
+  <depend>rosidl_runtime_py</depend>
+  <depend>ament_index_python</depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>ros2bag</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
